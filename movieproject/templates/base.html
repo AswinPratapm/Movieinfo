@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.css' %} ">
+</head>
+
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+
+    MOVIE INFO
+  </a>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" name="name" placeholder="Movie Search" aria-label="Search">
+      <a class="btn btn-outline-success" >Search</a>
+    </form>
+
+    <label align ="RIGHT"><a href="{% url 'movieapp:add_movie' %}">Add Movie</a></label>
+
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>
